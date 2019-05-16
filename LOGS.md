@@ -1,6 +1,5 @@
 # YAPILANLAR
-
--
+- depo oluşturuldu - yapıldı - 20190516-034131-muaz
 
 # YAPILIYORLAR
 
@@ -16,6 +15,13 @@
 
 # YAPILACAKLAR
 ## Bugün
+- çalışmaya devam et
+- *README.md* üzerine tanımlar yapılmalı
+    - nedir
+    - ne işe yarar
+    - nasıl kullanılır
+    - nasıl çalışır
+    - sorularını cevaplamalı
 ## Yarın
 ## Yakında
 ## Bir gün
