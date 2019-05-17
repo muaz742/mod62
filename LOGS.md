@@ -5,6 +5,7 @@
     - nedir - yapıldı - 20190517-153342-muaz
     - ne işe yarar - yapıldı - 20190517-153345-muaz
     - nasıl kullanılır - yapıldı - 20190517-153347-muaz
+- nasıl çalışır başlığında işleyiş tanımlanmalı - yapıldı - 20190517-230738-muaz
 
 # YAPILIYORLAR
 
@@ -20,8 +21,6 @@
 
 # YAPILACAKLAR
 ## Bugün
-- çalışmaya devam et
-- nasıl çalışır başlığında işleyiş tanımlanmalı
 ## Yarın
 ## Yakında
 ## Bir gün
