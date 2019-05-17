@@ -42,4 +42,12 @@ print "sonuç: ".$sonuc; // sonuç çıktı olarak alınır
 //sonuç: 123456
 ~~~
 
-<!-- # nasıl çalışır -->
+## nasıl çalışır
+fonksiyon çalışmak için anahtar dizisi ve girdiye ihtiyaç duyar. anahtar dizisi sabittir.<br>
+
+anahtar dizisi, sırasıya 'a-z', 'A-Z', '0-9' aralıklarındaki karakter dizilerinin birleşiminden oluşur.<br>
+karakter desteği sorunu yaşamamak için ingilizce alfabe kullanılır.
+
+yapılan işlem kısaca girdi olarak gelen değeri anahtar dizisinin eleman sayısının bir büyüğüne tekrar tekrar bölmek ve bu işlemden çıkan verileri kullanarak anahtar dizisine göre sonuç değerini oluşturmaktır.
+
+123456 = 31x63<sup>2</sup> + 6x63<sup>1<sup> + 39x63<sup>0</sup>
