@@ -24,3 +24,6 @@
 ## Yarın
 ## Yakında
 ## Bir gün
+- kodların arasına yapılan işlemi açıklayan yorum satırları eklenmeli
+- yapının akış şeması (diyagram) oluşturulmalı
+- işlem adımları *nasıl çalışır* başlığı altında açıklanabilir
