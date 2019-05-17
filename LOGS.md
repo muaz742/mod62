@@ -1,5 +1,10 @@
 # YAPILANLAR
 - depo oluşturuldu - yapıldı - 20190516-034131-muaz
+- *mod62.php* dosyası oluşturuldu. encode ve decode fonksiyonları tanımlandı - yapıldı - 20190517-140941-muaz
+- *README.md* üzerine tanımlar yapılmalı - yapıldı - 20190517-153428-muaz
+    - nedir - yapıldı - 20190517-153342-muaz
+    - ne işe yarar - yapıldı - 20190517-153345-muaz
+    - nasıl kullanılır - yapıldı - 20190517-153347-muaz
 
 # YAPILIYORLAR
 
@@ -16,12 +21,7 @@
 # YAPILACAKLAR
 ## Bugün
 - çalışmaya devam et
-- *README.md* üzerine tanımlar yapılmalı
-    - nedir
-    - ne işe yarar
-    - nasıl kullanılır
-    - nasıl çalışır
-    - sorularını cevaplamalı
+- nasıl çalışır başlığında işleyiş tanımlanmalı
 ## Yarın
 ## Yakında
 ## Bir gün
