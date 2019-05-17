@@ -42,7 +42,7 @@ print "sonuç: ".$sonuc; // sonuç çıktı olarak alınır
 //sonuç: 123456
 ~~~
 
-## nasıl çalışır
+## nasıl çalışır?
 fonksiyon çalışmak için anahtar dizisi ve girdiye ihtiyaç duyar. anahtar dizisi sabittir.
 
 anahtar dizisi, sırasıya 'a-z', 'A-Z', '0-9' aralıklarındaki karakter dizilerinin birleşiminden oluşur.<br>
