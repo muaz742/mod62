@@ -25,5 +25,8 @@
 ## Yakında
 ## Bir gün
 - kodların arasına yapılan işlemi açıklayan yorum satırları eklenmeli
+    - mod62_encode bloğu işlendi - yapıldı - 20190708-162824-muaz
 - yapının akış şeması (diyagram) oluşturulmalı
+    - 'mod62.drawio' dosyası oluşturuldu - yapıldı - 20190708-162938-muaz
+    - mod62_encode bloğu işlendi - yapıldı - 20190708-162941-muaz
 - işlem adımları *nasıl çalışır* başlığı altında açıklanabilir
