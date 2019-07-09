@@ -13,6 +13,8 @@
     - 'mod62.drawio' dosyası oluşturuldu - yapıldı - 20190708-162938-muaz
     - mod62_encode bloğu işlendi - yapıldı - 20190708-162941-muaz
     - mod62_decode bloğu işlendi - yapıldı - 20190709-154021-muaz
+- işlem adımları *nasıl çalışır* başlığı altında açıklanabilir
+    - işleyiş mantığını açıklayan başlık tanımlanmış - yapıldı - 20190709-154512-muaz
 
 # YAPILIYORLAR
 
@@ -31,4 +33,3 @@
 ## Yarın
 ## Yakında
 ## Bir gün
-- işlem adımları *nasıl çalışır* başlığı altında açıklanabilir
