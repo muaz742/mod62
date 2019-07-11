@@ -15,6 +15,7 @@
     - mod62_decode bloğu işlendi - yapıldı - 20190709-154021-muaz
 - işlem adımları *nasıl çalışır* başlığı altında açıklanabilir
     - işleyiş mantığını açıklayan başlık tanımlanmış - yapıldı - 20190709-154512-muaz
+- fonksiyonlar geliştirildi - yapıldı - 20190711-164454-muaz
 
 # YAPILIYORLAR
 
