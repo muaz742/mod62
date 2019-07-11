@@ -33,4 +33,5 @@
 ## Bugün
 ## Yarın
 ## Yakında
+- yeni geliştirmeye göre yorum satırları ve diyagram güncellenmeli - yapıldı - 20190711-165358-muaz
 ## Bir gün
