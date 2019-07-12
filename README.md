@@ -3,8 +3,9 @@ link kısaltma url oluşturma gibi işlemlerde kullanılan kodlayıcı
 
 ## nedir?
 bu fonksiyon;<br>
-girdi olarak gelen bir rakam dizisini daha az basamaklı karakter dizisine dönüştürür. ve bu yeni oluşan diziyi çıktı verir.<br>
-tam aksi yönde çözümleme işlemi de yapabilir.
+girdi olarak gelen bir sayıyı daha az basamaklı karakter dizisine dönüştürür. ve bu yeni oluşan diziyi çıktı verir.<br>
+tam aksi yönde çözümleme işlemi de yapabilir.<br>
+standart olarak 62 basamaklı anahtar dizisini kullanır. tercihen yeni bir anahtar tanımlanabilir.
 
 ## ne işe yarar?
 bu fonksiyonu kısaltılmış link oluşturma ihtiyacımı karşılamak amacıyla geliştirmeye başladım.<br>
@@ -43,20 +44,135 @@ print "sonuç: ".$sonuc; // sonuç çıktı olarak alınır
 ~~~
 
 ## nasıl çalışır?
-fonksiyon çalışmak için anahtar dizisi ve girdiye ihtiyaç duyar. anahtar dizisi sabittir.
+fonksiyon çalışmak için anahtar dizisi ve girdiye ihtiyaç duyar.<br>
+anahtar dizisi standart olarak tanımlıdır. tercihen tanımlanabilir.<br>
+standart olarak tanımlı anahtar dizisi sırasıya,<br>
+'a-z', 'A-Z', '0-9' aralıklarındaki karakter dizilerinin birleşiminden oluşur.<br>
+karakter desteği sorunu yaşamamak için ingilizce alfabe kerakterleri kullanılır.
 
-anahtar dizisi, sırasıya 'a-z', 'A-Z', '0-9' aralıklarındaki karakter dizilerinin birleşiminden oluşur.<br>
-karakter desteği sorunu yaşamamak için ingilizce alfabe kullanılır.
+fonksiyon,<br>
+genel olarak kullandığımız sayı sistemi olan mod 10 tabanındaki sayısal ifadeleri<br>
+mod 62 tabanına dönüştürür.<br>
+dönüştürme işlemi ile her basamağa ait basamak değerleri oluşur.<br>
+anahtar dizi içerisinde basamak değerine denk sıradaki karakterler belirlenir.<br>
+taban değeri anahtar dizisi eleman sayısına göre belirlendiği için basamak değeri anahtar dizide mutlaka karşılık bulacaktır.<br>
+basamak değerine karşılık gelen karakterler sırasıyla yazılır.<br>
+böylelikle sayısal ifade daha fazla karakter kullanılarak daha az basamak ile ifade edilmiş olur.<br>
+62 taban değeri standart olarak tanımlı anahtar karakter dizisinin eleman sayısının karşılığıdır.<br>
+anahtar dizi tercihe göre değiştirilebilir<<br>
+ve fonksiyon yeni tanımlanan anahtar diziye göre kodlama ve çözümleme yapabilir.
 
-yapılan işlem kısaca girdi olarak gelen değeri, anahtar dizisinin eleman sayısının bir büyüğüne tekrar tekrar bölmek ve bu işlemden çıkan verileri kullanarak anahtar dizisine göre sonuç değerini oluşturmaktır.
+kodlama ve çözümleme içerisinde,<br>
+temel olarak *sayı modu dönüştürme* ve *karatkter tanımlama* olmak üzere iki yöntem kullanılmaktadır.<br>
 
-örneğin, '123456' sayısı anahtar dizi eleman sayısının 1 fazlası olan 63 tabanında yazıldığında <br>
-123456 = 31x63<sup>2</sup> + 6x63<sup>1</sup> + 39x63<sup>0</sup><br>
-şekilde ifade edilebilir.<br>
-bu ifadede işlem kuralı ve 63 tabanı sabittir.<br>
-yapılan bölme işlemi miktarını ifade eden üs değeri ve bölme işlemi sırasında kalan değerden oluşan çarpan değişkendir.
-işlem sayısı miktarı değişken, fakat artışı sıralı yani sabittir.
-kalan ifade, anahtar dizisindeki eleman sayısından fazla olamayacağı için dizi içerisindeki sıraya karşılık gelen değer çağırıldığında sonuç her zaman bir ifadeye denk gelecektir.<br>
-bu çıkan sonuçlar basamaklara işlem sırasıyla yazıldığında işlem miktarını basamak miktarı, işlem sırasını da karakterin bulunduğu basamak sırası karşılar.<br>
-böylelikle çok basamaklı sayısal ifadeler daha az basamak ile ifade edilebilir.<br>
-çözümlemede ise ters işlem yapılarak sayıya ulaşmak mümkündür.
+### kodlama mantığı (örnekli anlatım)
+
+örneğin mod62_encode(123456) işlemini yaparken,
+
+girdi olarak anahtar dizisi tanımlanmışsa;<br>
+bölüm değeri, anahtar dizisinin eleman sayısıdır.<br>
+değilse;<br>
+bölüm değeri, standart olarak tanımlı olan anahtar dizisinin eleman sayısı olan 62'dir.
+
+**sayı modu dönüştürme**
+
+öncelikle 123456 sayısı mod 62 tabanına dönüştürülür. bunun için sayı;
+
+bölüm değeri 0 oluncaya dek 62'ye bölünür.<br>
+işlem kaydı aşağıdaki gibi olur;
+
+|işlem<br>sırası|bölünen|bölen|bölüm|kalan|
+|:---:|--:|:---:|--:|--:|
+|0|123456|62|1991|14|
+|1|1991|62|32|7|
+|2|31|62|0|32|
+
+işlem kayıtlarına göre her satıra ait eleman oluşturulur.<br>
+gösterimi <b>*kalan* X *bölen*<sup>*işlem sırası*</sup></b> şeklindedir.<br>
+bu elamanların toplamı sayının kendisine eşittir.<br>
+
+elemanların işlem ve sonuç sütunlarını eklendiğinde tablo aşağıdaki gibi olur;
+
+|işlem<br>sırası|bölünen|bölen|bölüm|kalan|eleman<br>*(işlem)*|eleman<br>*(sonuç)*|
+|:---:|--:|:---:|--:|--:|--:|--:|
+|0|123456|62|1991|14|14x62<sup>0</sup>|14|
+|1|1991|62|32|7|7x62<sup>1</sup>|434|
+|2|31|62|0|32|32x62<sup>2</sup>|123008|
+
+eleman toplamlarıyla sağlamasını yapıldığında;
+
+123456 = 14x62<sup>0</sup> + 7x62<sup>1</sup> + 32x62<sup>2</sup><br>
+123456 = 14 + 434 + 123008<br>
+123456 = 123456 <br>
+işlemin sayıya sonuçlandığını görülebilir 👌
+
+işlem sırası 62 tabanındaki yeni ifadenin basamak değerini ifade eder.<br>
+buna göre örneğin 3 basamağı vardır ve basamak değerleri;
+
+|32|7|14|
+|:-:|:-:|:-:|
+|3.basamak|2.basamak|1.basamak|
+
+şeklindedir.
+
+**karakter tanımlama**
+
+sayı, 62 tabanına dönüştürülüp basamak değerleri belirlendikten sonra<br>
+her basamağı tek bir karakter ile ifade etmek için<br>
+mod tabanında eleman sayısını referans alınan anahtar dizisinde<br>
+basamak değerine karşılık gelen karakter kullanılır ve sonuç
+
+|32|7|14|
+|:-:|:-:|:-:|
+|3.basamak|2.basamak|1.basamak|
+|G|h|o|
+
+şeklinde olur.
+
+bu işleme göre;<br>
+mod62_encode(123456) = **'Gho'**<br>
+şeklinde sonuçlanır.
+
+#### çözümleme mantığı (örnekli anlatım**
+
+örneğin mod62_decode('Gho') işlemini yaparken,
+
+girdi olarak anahtar dizisi tanımlanmışsa;<br>
+bölüm değeri, anahtar dizisinin eleman sayısıdır.<br>
+değilse;<br>
+taban değeri, standart olarak tanımlı olan anahtar dizisinin eleman sayısı olan 62'dir.
+
+**karakter kıyaslama**
+
+karakter dizisi basamaklarına ayrılır.
+
+|G|h|o|
+|:-:|:-:|:-:|
+|3.basamak|2.basamak|1.basamak|
+
+her bir karakterin anahtar dizi içerisindeki sıra numarası belirlenir.
+
+|G|h|o|
+|:-:|:-:|:-:|
+|3.basamak|2.basamak|1.basamak|
+|32|7|14|
+
+basamak değeri ve basamak sırasına göre her satıra ait eleman oluşturulur.<br>
+gösterimi <b>*basamak değeri* X *taban*<sup>*basamak değeri - 1*</sup></b> şeklindedir.<br>
+bu elamanların toplamı sayının kendisine eşittir.<br>
+
+basamak değerlerine göre elemanlar işlendiğinde sonuç;
+
+|basamak<br>sırası|karakter|basamak<br>değeri|eleman<br>*(işlem)*|eleman<br>*(sonuç)*|
+|--:|:-:|--:|--:|--:|
+|1.basamak|o|14|14x62<sup>0</sup>|14|
+|2.basamak|h|7|7x62<sup>1</sup>|434|
+|3.basamak|G|32|32x62<sup>2</sup>|123008|
+
+şeklinde olur.<br>
+eleman işlemleri hesaplandığında fonksiyon;
+
+mod62_decode('Gho') = 14x62<sup>0</sup> + 7x62<sup>1</sup> + 32x62<sup>2</sup><br>
+mod62_decode('Gho') = 14 + 434 + 123008<br>
+mod62_decode('Gho') = **123456**<br>
+şeklinde sonuçlanır.
