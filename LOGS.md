@@ -17,6 +17,7 @@
     - işleyiş mantığını açıklayan başlık tanımlanmış - yapıldı - 20190709-154512-muaz
 - fonksiyonlar geliştirildi - yapıldı - 20190711-164454-muaz
 - *README.md* dosyası içerisindeki tanımlar güncellendi - yapıldı - 20190712-151736-muaz
+- *README.md* dosyası içerisinde yazım düzeltmesi yapıldı - yapıldı - 20190712-153338-muaz
 
 # YAPILIYORLAR
 
