@@ -21,6 +21,7 @@
 - yeni geliştirmeye göre yorum satırları ve diyagram güncellenmeli - yapıldı - 20190711-165358-muaz
     - yorum satırları güncellendi - yapıldı - 20190712-160421-muaz
     - diyagrama işlendi - yapıldı - 20190712-160429-muaz
+- *README.md* anlatım geliştirildi - yapıldı - 20190712-161728-muaz
 
 # YAPILIYORLAR
 
