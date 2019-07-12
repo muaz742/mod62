@@ -110,7 +110,8 @@ genel olarak kullandığımız sayı sistemi olan mod 10 tabanındaki sayısal i
 mod 62 tabanına dönüştürür.<br>
 dönüştürme işlemi ile her basamağa ait basamak değerleri oluşur.<br>
 anahtar dizi içerisinde basamak değerine denk sıradaki karakterler belirlenir.<br>
-taban değeri anahtar dizisi eleman sayısına göre belirlendiği için basamak değeri anahtar dizide mutlaka karşılık bulacaktır.<br>
+taban değeri anahtar dizisi eleman sayısına göre belirlenmiştir<br>
+ve bu yüzden basamak değeri anahtar dizide mutlaka karşılık bulacaktır.<br>
 basamak değerine karşılık gelen karakterler sırasıyla yazılır.<br>
 böylelikle sayısal ifade daha fazla karakter kullanılarak daha az basamak ile ifade edilmiş olur.<br>
 62 taban değeri standart olarak tanımlı anahtar karakter dizisinin eleman sayısının karşılığıdır.<br>
@@ -172,10 +173,11 @@ buna göre örneğin 3 basamağı vardır ve basamak değerleri;
 
 **karakter tanımlama**
 
-sayı, 62 tabanına dönüştürülüp basamak değerleri belirlendikten sonra<br>
-her basamağı tek bir karakter ile ifade etmek için<br>
-mod tabanında eleman sayısını referans alınan anahtar dizisinde<br>
-basamak değerine karşılık gelen karakter kullanılır ve sonuç
+sayı,<br>
+62 tabanına dönüştürülüp basamak değerleri belirlendikten sonra<br>
+her basamağı tek bir karakter ile ifade etmek gerekir.<br>
+bunun için<br>
+anahtar dizisinde basamak değerine karşılık gelen karakter kullanılır ve sonuç
 
 |32|7|14|
 |:-:|:-:|:-:|
