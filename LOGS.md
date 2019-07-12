@@ -18,6 +18,9 @@
 - fonksiyonlar geliştirildi - yapıldı - 20190711-164454-muaz
 - *README.md* dosyası içerisindeki tanımlar güncellendi - yapıldı - 20190712-151736-muaz
 - *README.md* dosyası içerisinde yazım düzeltmesi yapıldı - yapıldı - 20190712-153338-muaz
+- yeni geliştirmeye göre yorum satırları ve diyagram güncellenmeli - yapıldı - 20190711-165358-muaz
+    - yorum satırları güncellendi - yapıldı - 20190712-160421-muaz
+    - diyagrama işlendi - yapıldı - 20190712-160429-muaz
 
 # YAPILIYORLAR
 
@@ -35,5 +38,4 @@
 ## Bugün
 ## Yarın
 ## Yakında
-- yeni geliştirmeye göre yorum satırları ve diyagram güncellenmeli - yapıldı - 20190711-165358-muaz
 ## Bir gün
