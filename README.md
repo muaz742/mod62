@@ -40,7 +40,7 @@ link kısaltma url oluşturma gibi işlemlerde kullanılan kodlayıcı
           </a>
           <ul>
             <li>
-              <a>
+              <a href="https://github.com/muaz742/mod62#%C3%A7%C3%B6z%C3%BCmleme-mant%C4%B1%C4%9F%C4%B1-%C3%B6rnekli-anlat%C4%B1m">
                 çözümleme mantığı (örnekli anlatım)
               </a>
             </li>
@@ -188,7 +188,7 @@ bu işleme göre;<br>
 mod62_encode(123456) = **'Gho'**<br>
 şeklinde sonuçlanır.
 
-#### çözümleme mantığı (örnekli anlatım)
+### çözümleme mantığı (örnekli anlatım)
 
 örneğin mod62_decode('Gho') işlemini yaparken,
 
