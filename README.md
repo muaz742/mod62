@@ -1,6 +1,61 @@
 # mod62
 link kısaltma url oluşturma gibi işlemlerde kullanılan kodlayıcı
 
+<table>
+  <tr>
+    <td><b>başlıklar</b></td>
+  </tr>
+  <tr>
+    <td>
+      <ul>
+        <li>
+          <a href="https://github.com/muaz742/mod62#nedir">
+            nedir
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/muaz742/mod62#ne-i%C5%9Fe-yarar">
+            ne işe yarar?
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/muaz742/mod62#nas%C4%B1l-kullan%C4%B1l%C4%B1r">
+            nasıl kullanılır?
+          </a>
+          <ul>
+            <li>
+              <a href="https://github.com/muaz742/mod62#mod62_encode-kullan%C4%B1m%C4%B1">
+                mod62_encode kullanımı
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/muaz742/mod62#mod62_decode-kullan%C4%B1m%C4%B1">
+                mod62_decode kullanımı
+              </a>
+            </ul
+        </li>
+        <li>          
+          <a href="https://github.com/muaz742/mod62#nas%C4%B1l-%C3%A7al%C4%B1%C5%9F%C4%B1r">
+            nasıl çalışır?
+          </a>
+          <ul>
+            <li>
+              <a>
+                çözümleme mantığı (örnekli anlatım)
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/muaz742/mod62#kodlama-mant%C4%B1%C4%9F%C4%B1-%C3%B6rnekli-anlat%C4%B1m">
+                kodlama mantığı (örnekli anlatım)
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
 ## nedir?
 bu fonksiyon;<br>
 girdi olarak gelen bir sayıyı daha az basamaklı karakter dizisine dönüştürür. ve bu yeni oluşan diziyi çıktı verir.<br>
@@ -133,7 +188,7 @@ bu işleme göre;<br>
 mod62_encode(123456) = **'Gho'**<br>
 şeklinde sonuçlanır.
 
-#### çözümleme mantığı (örnekli anlatım**
+#### çözümleme mantığı (örnekli anlatım)
 
 örneğin mod62_decode('Gho') işlemini yaparken,
 
