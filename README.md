@@ -73,7 +73,7 @@ ardından kullanılmak istenen yapının baş kısmına
 ~~~
 include 'mod62.php';
 ~~~
-şeklinde ekleme yapılarak **mod62_encode** ve **mod62_decode** fonksiyonları kullanıma hazır hale gelir.<br>
+şeklinde ekleme yapılır ve **mod62_encode** ve **mod62_decode** fonksiyonları kullanıma hazır hale gelir.<br>
 
 ### mod62_encode kullanımı
 kodlanacak değer sayı tipinde olmalıdır.<br>
@@ -101,7 +101,7 @@ print "sonuç: ".$sonuc; // sonuç çıktı olarak alınır
 ## nasıl çalışır?
 fonksiyon çalışmak için anahtar dizisi ve girdiye ihtiyaç duyar.<br>
 anahtar dizisi standart olarak tanımlıdır. tercihen tanımlanabilir.<br>
-standart olarak tanımlı anahtar dizisi sırasıya,<br>
+standart olarak tanımlı anahtar dizisi sırasıyla,<br>
 'a-z', 'A-Z', '0-9' aralıklarındaki karakter dizilerinin birleşiminden oluşur.<br>
 karakter desteği sorunu yaşamamak için ingilizce alfabe kerakterleri kullanılır.
 
@@ -114,11 +114,11 @@ taban değeri anahtar dizisi eleman sayısına göre belirlendiği için basamak
 basamak değerine karşılık gelen karakterler sırasıyla yazılır.<br>
 böylelikle sayısal ifade daha fazla karakter kullanılarak daha az basamak ile ifade edilmiş olur.<br>
 62 taban değeri standart olarak tanımlı anahtar karakter dizisinin eleman sayısının karşılığıdır.<br>
-anahtar dizi tercihe göre değiştirilebilir<<br>
+anahtar dizi tercihe göre değiştirilebilir<br>
 ve fonksiyon yeni tanımlanan anahtar diziye göre kodlama ve çözümleme yapabilir.
 
 kodlama ve çözümleme içerisinde,<br>
-temel olarak *sayı modu dönüştürme* ve *karatkter tanımlama* olmak üzere iki yöntem kullanılmaktadır.<br>
+temel olarak *sayı modu dönüştürme* ve *karakter tanımlama* olmak üzere iki yöntem kullanılmaktadır.<br>
 
 ### kodlama mantığı (örnekli anlatım)
 
@@ -159,7 +159,7 @@ eleman toplamlarıyla sağlamasını yapıldığında;
 123456 = 14x62<sup>0</sup> + 7x62<sup>1</sup> + 32x62<sup>2</sup><br>
 123456 = 14 + 434 + 123008<br>
 123456 = 123456 <br>
-işlemin sayıya sonuçlandığını görülebilir 👌
+işlemin aynı sonucu (sayıyı) verdiği görülür 👌
 
 işlem sırası 62 tabanındaki yeni ifadenin basamak değerini ifade eder.<br>
 buna göre örneğin 3 basamağı vardır ve basamak değerleri;
