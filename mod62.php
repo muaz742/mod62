@@ -20,14 +20,16 @@ class Mod62
         /** böleni tanımla */
         $bolen = count($anahtar);
         /** kalanları tanımla */
-        $i = 0;
         $kalanlar = [];
-        while ($bolunen > 1) {
-            $kalan = $bolunen % $bolen;
-            $bolum = floor($bolunen / $bolen);
-            array_push($kalanlar, $kalan);
-            $bolunen = $bolum;
-            $i++;
+        if ($bolunen==0){
+            array_push($kalanlar,$bolunen);
+        }else{
+            while ($bolunen > 0) {
+                $kalan = $bolunen % $bolen;
+                $bolum = floor($bolunen / $bolen);
+                array_push($kalanlar, $kalan);
+                $bolunen = $bolum;
+            }
         }
         /** karakterleri tanımla */
         $i = count($kalanlar) - 1;
