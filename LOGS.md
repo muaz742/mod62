@@ -22,6 +22,8 @@
     - yorum satırları güncellendi - yapıldı - 20190712-160421-muaz
     - diyagrama işlendi - yapıldı - 20190712-160429-muaz
 - *README.md* anlatım geliştirildi - yapıldı - 20190712-161728-muaz
+- fonksiyonlar 'Mod62' sınıfı içerisinde birleştirildi - yapıldı - 20190714-220847-muaz
+- 'encode' fonksiyonu geliştirildi - yapıldı - 20190714-220939-muaz
 
 # YAPILIYORLAR
 
