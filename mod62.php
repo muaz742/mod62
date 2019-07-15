@@ -7,23 +7,22 @@
 
 class Mod62
 {
-    public $girdi;
     public $anahtar = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
-    public function encode()
+    public function encode($girdi)
     {
         /** anahtar diziyi tanımla */
         $anahtar = $this->anahtar;
         $anahtar = str_split($anahtar);
         /** bölüneni tanımla */
-        $bolunen = $this->girdi;
+        $bolunen = $girdi;
         /** böleni tanımla */
         $bolen = count($anahtar);
         /** kalanları tanımla */
         $kalanlar = [];
-        if ($bolunen==0){
-            array_push($kalanlar,$bolunen);
-        }else{
+        if ($bolunen == 0) {
+            array_push($kalanlar, $bolunen);
+        } else {
             while ($bolunen > 0) {
                 $kalan = $bolunen % $bolen;
                 $bolum = floor($bolunen / $bolen);
@@ -43,7 +42,7 @@ class Mod62
         return $cikti;
     }
 
-    public function decode()
+    public function decode($girdi)
     {
         /** anahtar diziyi tanımla */
         $anahtar = $this->anahtar;
@@ -52,7 +51,6 @@ class Mod62
         /** böleni tanımla */
         $bolen = count($anahtar);
         /** karakterleri tanımla */
-        $girdi = $this->girdi;
         $girdi = str_split($girdi);
         $girdi = array_reverse($girdi);
         /** sayıyı hesapla */
