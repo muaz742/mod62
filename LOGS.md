@@ -24,6 +24,7 @@
 - *README.md* anlatım geliştirildi - yapıldı - 20190712-161728-muaz
 - fonksiyonlar 'Mod62' sınıfı içerisinde birleştirildi - yapıldı - 20190714-220847-muaz
 - 'encode' fonksiyonu geliştirildi - yapıldı - 20190714-220939-muaz
+- kullanım kolaylığı sağlaması açısından girdi değerleri fonksiyon girdi kısmına aktarıldı - yapıldı - 20190715-174648-muaz
 
 # YAPILIYORLAR
 
