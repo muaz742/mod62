@@ -7,11 +7,13 @@
 
 class Mod62
 {
+    /** standart karakter setini tanımla */
     public $anahtar = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
-    public function encode($girdi)
+    /** kodlama fonksiyonu tanımla */
+    public function encode($girdi = 180667806)
     {
-        /** anahtar diziyi tanımla */
+        /** karakter setini diziye dönüştür */
         $anahtar = $this->anahtar;
         $anahtar = str_split($anahtar);
         /** bölüneni tanımla */
@@ -42,9 +44,10 @@ class Mod62
         return $cikti;
     }
 
-    public function decode($girdi)
+    /** çözümleme fonksiyonu tanımla */
+    public function decode($girdi = "mod62")
     {
-        /** anahtar diziyi tanımla */
+        /** karakter setini diziye dönüştür */
         $anahtar = $this->anahtar;
         $anahtar = str_split($anahtar);
         $anahtar = array_flip($anahtar);
