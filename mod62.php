@@ -70,3 +70,15 @@ class Mod62
         return $cikti;
     }
 }
+
+/** örnek kullanım
+ *
+ * obje tanımlanır
+ * $obje = new Mod62();
+ *
+ * çözümleme için
+ * echo $obje->encode(46999)
+ *
+ * kodlama için
+ * echo $obje->decode('ba');
+ */
