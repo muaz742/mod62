@@ -77,7 +77,7 @@ class Mod62
  * $obje = new Mod62();
  *
  * çözümleme için
- * echo $obje->encode(46999)
+ * echo $obje->encode(46999);
  *
  * kodlama için
  * echo $obje->decode('ba');
