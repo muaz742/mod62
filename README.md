@@ -57,53 +57,44 @@ link kısaltma url oluşturma gibi işlemlerde kullanılan kodlayıcı
 </table>
 
 ## nedir?
-bu fonksiyon;<br>
+bu sınıf;<br>
 girdi olarak gelen bir sayıyı daha az basamaklı karakter dizisine dönüştürür. ve bu yeni oluşan diziyi çıktı verir.<br>
 tam aksi yönde çözümleme işlemi de yapabilir.<br>
 standart olarak 62 basamaklı anahtar dizisini kullanır. tercihen yeni bir anahtar tanımlanabilir.
 
 ## ne işe yarar?
-bu fonksiyonu kısaltılmış link oluşturma ihtiyacımı karşılamak amacıyla geliştirmeye başladım.<br>
-fakat sadece bu amaçla kullanılmak zorunda değil.
+bu sınıfı kısaltılmış link oluşturma ihtiyacımı karşılamak amacıyla geliştirdim.<br>
+kabaca, sayısal ifadelerin karakter setindeki ifadeler kullanılarak yeniden ifade edilmesini sağlar.<br>
 
 ## nasıl kullanılır?
-kullanmaya başlamadan önce [mod62.php](mod62.php) dosya indirilip kullanılacak yapıya eklenir.
+İndirilen [mod62.php](mod62.php) dosyası kullanılacak yapıya eklenir.
 
-ardından kullanılmak istenen yapının baş kısmına 
-~~~
+ardından kullanılmak istenen yapıya dahil edilir.
+~~~php
 include 'mod62.php';
 ~~~
-şeklinde ekleme yapılır ve **mod62_encode** ve **mod62_decode** fonksiyonları kullanıma hazır hale gelir.<br>
-
-### mod62_encode kullanımı
-kodlanacak değer sayı tipinde olmalıdır.<br>
-kodlanacak değer mod62_encode() fonksiyonuna girdi olarak tanımlanmalıdır.
-
+şeklinde ekleme yapılabilir.<br>
+```Mod62()```sınıfı ile obje oluşturulur. Obje içerisinden ```encode()``` ve ```decode()``` fonksiyonları ile kullanılabilir.<br>
 **örnek kullanım**;
-~~~
-$sonuc = 123456 //kodlanacak değer buraya tanımlanır
-$sonuc = mod62_encode($sonuc);
-echo "sonuç: ".$sonuc; // sonuç çıktı olarak alınır
-//sonuç: MfE
-~~~
+```php
+//obje oluşturumu
+$obje = new Mod62();
 
-### mod62_decode kullanımı
-çözümlenecek değer mod62_decode() fonksiyonuna girdi olarak tanımlanmalıdır.
+//kodlama işlevi kullanımı
+echo $obje->encode(46999); //kodlanacak değer sayı tipinde olmalıdır.
 
-**örnek kullanım**;
-~~~
-$sonuc = 'MfE' //çözümlenecek değer buraya tanımlanır
-$sonuc = mod62_decode($sonuc);
-print "sonuç: ".$sonuc; // sonuç çıktı olarak alınır
-//sonuç: 123456
-~~~
+//çözümleme işlevi kullanımı
+echo $obje->decode('ba');
+```
 
 ## nasıl çalışır?
 fonksiyon çalışmak için anahtar dizisi ve girdiye ihtiyaç duyar.<br>
 anahtar dizisi standart olarak tanımlıdır. tercihen tanımlanabilir.<br>
 standart olarak tanımlı anahtar dizisi sırasıyla,<br>
 'a-z', 'A-Z', '0-9' aralıklarındaki karakter dizilerinin birleşiminden oluşur.<br>
-karakter desteği sorunu yaşamamak için ingilizce alfabe kerakterleri kullanılır.
+karakter desteği sorunu yaşamamak için ingilizce alfabe kerakterleri kullanılır.<br>
+oluşan karakter seti bu şekildedir;
+``` "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" ```
 
 fonksiyon,<br>
 genel olarak kullandığımız sayı sistemi olan mod 10 tabanındaki sayısal ifadeleri<br>
