@@ -72,13 +72,12 @@ class Mod62
 }
 
 /** örnek kullanım
- *
- * obje tanımlanır
- * $obje = new Mod62();
- *
- * çözümleme için
- * echo $obje->encode(46999);
- *
- * kodlama için
- * echo $obje->decode('ba');
+//obje oluşturumu
+$obje = new Mod62();
+
+//kodlama işlevi kullanımı
+echo $obje->encode(46999); //kodlanacak değer sayı tipinde olmalıdır.
+
+//çözümleme işlevi kullanımı
+echo $obje->decode('ba');
  */
