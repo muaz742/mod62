@@ -33,10 +33,10 @@ class Mod62
             }
         }
         /** karakterleri tanımla */
-        $i = count($kalanlar) - 1;
-        while ($i >= 0) {
-            $degerA = $anahtar[$kalanlar[$i]];
+        $i = count($kalanlar);
+        while ($i > 0) {
             $i--;
+            $degerA = $anahtar[$kalanlar[$i]];
             /** karşılık gelen değeri çıktıya ekle */
             (empty($cikti)) ? $cikti = $degerA : $cikti = $cikti . $degerA;
         }
