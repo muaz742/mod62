@@ -1,13 +1,22 @@
-
+function checkKey() {
+    var key = document.getElementById("anahtar").value;
+    if (typeof key == "undefined" || key == null || key == ""){
+        return 0;
+    }else {
+        return 1;
+    }
+}
 function btnEncode(){
     let obje = new Mod62();
     obje.girdi = document.getElementById("girdi").value;
+    (checkKey())?obje.anahtar = document.getElementById("anahtar").value:null;
     var result = obje.encode();
     document.getElementById("textResult").value = result;
 }
 function btnDecode(){
     let obje = new Mod62();
     obje.girdi = document.getElementById("girdi").value;
+    (checkKey())?obje.anahtar = document.getElementById("anahtar").value:null;
     var result = obje.decode();
     document.getElementById("textResult").value = result;
 }
