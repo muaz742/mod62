@@ -4,6 +4,14 @@ A branch of the Mod62 API.
 
 ## Usage
 
+**API Url:**
+
+```
+https://mod62api.herokuapp.com/
+```
+
+**API Details:**
+
 ```json
 {
   "welcome": "Mod62 Encoder/Decoder API",
