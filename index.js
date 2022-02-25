@@ -3,7 +3,7 @@ const mod62 = require("./mod62");
 
 let obje = new mod62();
 app = express();
-port = 3000;
+port = 5000;
 
 app.get('/',function(req,res){
     res.header("Content-Type",'application/json');
@@ -71,6 +71,6 @@ app.get('/decode',(req, res)=>{
 }
 );
 
-app.listen(port,()=>{
+app.listen(process.env.PORT || port,()=>{
     console.log(`Server is running on port ${port}`);
 });
