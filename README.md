@@ -1,6 +1,8 @@
 # mod62
 link kısaltma url oluşturma gibi işlemlerde kullanılan kodlayıcı
 
+If you want test on your project use to [API Branch](https://github.com/muaz742/mod62/tree/mod62api).
+
 <table>
   <tr>
     <td><b>başlıklar</b></td>
