@@ -1,3 +1,4 @@
+module.exports = 
 class Mod62 {
     constructor(girdi, anahtar = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789") {
         this.girdi = girdi;
