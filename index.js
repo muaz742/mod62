@@ -60,7 +60,7 @@ app.get('/decode',(req, res)=>{
     res.header("Content-Type",'application/json');
     const resJson = {
         method : "decode",
-        inpur : req.query.girdi,
+        input : req.query.girdi,
         output : obje.decode(),
         date : Date.now(),
         userAgent : req.headers['user-agent']
