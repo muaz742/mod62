@@ -48,7 +48,7 @@ bot.onText(/\/cancel/, (msg) => {
 });
 
 bot.onText(/\/key/, (msg) => {
-  bot.sendMessage(msg.chat.id, "Merhaba", {
+  bot.sendMessage(msg.chat.id, "Keyboard activated.", {
     reply_markup: {
       keyboard: [["/encode", "/decode"],   ["/cancel"], ["/help"]]
     }
