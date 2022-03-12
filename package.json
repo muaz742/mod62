@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/muaz742/mod62/issues"
   },
-  "homepage": "https://github.com/muaz742/mod62#readme"
+  "homepage": "https://github.com/muaz742/mod62#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.56.0"
+  }
 }
