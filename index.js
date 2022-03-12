@@ -19,7 +19,7 @@ bot.on('webhook_error', (error) => {
 });
 
 var botCommand = "";
-var helpMessage = "I can encode and decode their values according to Mod62.\n\nYou can control me by sending these commands:\n\n/encode - Type the number you want to convert to encode a number.\n/decode - Type the value you want to convert to decode a value.\n\n/cancel - Cancel current command\n./key - Get command keyboard.";
+var helpMessage = "I can encode and decode their values according to Mod62.\n\nYou can control me by sending these commands:\n\n/encode - Type the number you want to convert to encode a number.\n/decode - Type the value you want to convert to decode a value.\n\n/cancel - Cancel current command.\n/key - Get command keyboard.";
 
 bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, "Welcome Mod62bot!\n\n" + "To get started, type /help");
