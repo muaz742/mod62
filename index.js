@@ -2,7 +2,7 @@ console.log('Hello, World!');
 console.log('I\'m Mod62bot');
 
 const mod62 = require('./mod62');
-let mod62bot = new mod62.Mod62bot();
+let mod62bot = new mod62();
 
 const TOKEN = process.env.TELEGRAM_TOKEN;
 const URL = process.env.APP_URL;
