@@ -32,19 +32,19 @@ bot.onText(/\/help/, (msg) => {
 bot.onText(/\/encode/, (msg) => {
   console.log(msg.chat.username + ": clicked encode");
   bot.sendMessage(msg.chat.id, "Enter the value (integer) to encode:");
-  codingCommand = "encode";
+  botCommand = "encode";
 });
 
 bot.onText(/\/decode/, (msg) => {
   console.log(msg.chat.username + ": clicked decode");
   bot.sendMessage(msg.chat.id, "Enter the value to decode:")
-  codingCommand = "decode";
+  botCommand = "decode";
 });
 
 bot.onText(/\/cancel/, (msg) => {
   console.log(msg.chat.username + ": clicked cancel");
   bot.sendMessage(msg.chat.id, "Command cancelled.");
-  codingCommand = "";
+  botCommand = "";
 });
 
 bot.onText(/\/key/, (msg) => {
@@ -57,19 +57,19 @@ bot.onText(/\/key/, (msg) => {
 
 bot.on('message', (msg) => {
   console.log(msg);
-  switch (codingCommand) {
+  switch (botCommand) {
     case "encode":
       mod62bot.girdi = msg.text;
       console.log(msg.text + " (msg.text) to " + mod62bot.encode() + "\nin encode")
       bot.sendMessage(msg.chat.id, mod62bot.encode());
-      codingCommand = "";
+      botCommand = "";
       console.log("command clear");
       break;
     case "decode":
       mod62bot.girdi = msg.text;
       console.log(msg.text + " to " + mod62bot.decode() + "\nin decode")
       bot.sendMessage(msg.chat.id, mod62bot.decode());
-      codingCommand = "";
+      botCommand = "";
       console.log("command clear");
       break;
     default:
