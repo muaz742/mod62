@@ -1,0 +1,17 @@
+{
+    "start":"Welcome Mod62bot!\n\nTo get started, type /help",
+    "help":"I can encode and decode their values according to Mod62.\n\nYou can control me by sending these commands:\n\n/encode - Type the number you want to convert to encode a number.\n/decode - Type the value you want to convert to decode a value.\n\n/cancel - Cancel current command.\n/key - Get command keyboard.",
+    "encode":"Enter the value (integer) to encode:",
+    "decode":"Enter the value to decode:",
+    "cancel":"Command cancelled.",
+    "key":"Keyboard activated.",
+    "commands":[
+        "/encode - encode value",
+        "/decode - decode value",
+        "/cancel - cancel current command",
+        "/key - get command keyboard.",
+        "/help - help menu"
+    ],
+    "about":"Mod62 Encoder/Decoder Telegram Bot.\nhttps://github.com/muaz742/mod62",
+    "description":"Mod62 Encoder/Decoder Telegram Bot.\nhttps://github.com/muaz742/mod62"
+}
