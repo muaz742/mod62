@@ -12,7 +12,6 @@ Mod62.js    // for JavaScript
 Mod62.py    // for Python
 ```
 
-
 ## Usage
 
 *If you want test on your project use to [Mod62 API Branch](https://github.com/muaz742/mod62/tree/mod62api).*
